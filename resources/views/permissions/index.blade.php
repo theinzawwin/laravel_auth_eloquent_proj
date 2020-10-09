@@ -1,6 +1,6 @@
 <header>Manage User Permissions</header>
 <div class="row">
-<a href="">Create User Permission</a>
+<a href="{{route('permission.create')}}">Create User Permission</a>
  <table>
     <thead>
         <tr>

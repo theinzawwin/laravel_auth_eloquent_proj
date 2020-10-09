@@ -8,6 +8,12 @@
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
                 <div class="card-body">
+                @can('manage_item')
+                    <h3>Manage Item</h3>
+                @endcan
+                @can('manage_category)
+                    <h3>Manage Category</h3>
+                @endcan
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}

@@ -8,4 +8,7 @@ class Permission extends Model
 {
     //
     public $timestamps = false;
+    public function userpermissions(){
+        return $this->hasMany('App\UserPermission');
+    }
 }
