@@ -11,7 +11,7 @@
                 @can('manage_item')
                     <h3>Manage Item</h3>
                 @endcan
-                @can('manage_category)
+                @can('manage_category')
                     <h3>Manage Category</h3>
                 @endcan
                     @if (session('status'))

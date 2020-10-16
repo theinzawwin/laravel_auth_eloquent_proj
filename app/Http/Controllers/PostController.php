@@ -23,7 +23,10 @@ class PostController extends Controller
     public function alluser()
     {
         //
-        
+        if (Gate::allows('manage_category')) {
+            // The current user can edit settings
+            
+        }
         $posts=Post::get();
         return view('post.alluser',['posts'=>$posts]);
     }

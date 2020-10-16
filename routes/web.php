@@ -21,5 +21,5 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/permission','PermissionController');
-Route::resource('/posts','PostController');
+Route::resource('/posts','PostController')->middleware('can:manage_category');
 Route::get('/allpost','PostController@alluser');

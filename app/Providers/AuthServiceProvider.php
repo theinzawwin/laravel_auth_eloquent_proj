@@ -29,8 +29,8 @@ class AuthServiceProvider extends ServiceProvider
          
             $per=UserPermission::whereHas('permission', function($query) {
                 $query->where('code', 'mg_category');
-             })->where('user_id',$user->id)->get();
-             dd($per);
+             })->where('user_id',$user->id)->first();
+           //  dd($per);
             return $per!=null?true:false;
          });
          
@@ -39,8 +39,8 @@ class AuthServiceProvider extends ServiceProvider
            //  dd($userpermission);
               $per=UserPermission::whereHas('permission', function($query) {
                   $query->where('code', 'mg_item');
-               })->where('user_id',$user->id)->get();
-             //  dd($per);
+               })->where('user_id',$user->id)->first();
+               //dd($per);
               return $per!=null?true:false;
            });
         //
